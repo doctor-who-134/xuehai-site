@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" role="img" aria-label="灯塔：塔、灯与扫动的光束">
+  <defs>
+    <linearGradient id="l-mist" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1B1B1D" stop-opacity="0"/>
+      <stop offset=".7" stop-color="#1B1B1D" stop-opacity="0.04"/>
+      <stop offset="1" stop-color="#1B1B1D" stop-opacity="0.079"/>
+    </linearGradient>
+    <linearGradient id="l-beam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#B0502A" stop-opacity="0.29"/>
+      <stop offset="1" stop-color="#B0502A" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .beam { animation: sweep 12s ease-in-out infinite alternate; transform-box: view-box; transform-origin: 700px 104px; }
+    .lamp { animation: lamppulse 6s ease-in-out infinite alternate; }
+    .tide-a { animation: tide-a 17s ease-in-out infinite alternate; }
+    .bird { animation: glide 13s ease-in-out infinite alternate; }
+    @keyframes sweep { from { transform: rotate(-5deg); } to { transform: rotate(5deg); } }
+    @keyframes lamppulse { from { opacity: .6; } to { opacity: 1; } }
+    @keyframes tide-a { from { transform: translateX(0); } to { transform: translateX(-11px); } }
+    @keyframes glide { from { transform: translate(0, 0); } to { transform: translate(14px, -4px); } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+  <rect width="1200" height="300" fill="url(#l-mist)"/>
+  <path d="M0 300 L180 266 C 260 252 330 256 396 272 L470 300 Z" fill="#1B1B1D" opacity="0.073"/>
+  <path d="M0 300 L96 286 C 130 281 156 282 178 288 L214 300 Z" fill="#1B1B1D" opacity="0.119"/>
+  <line x1="0" y1="300" x2="1200" y2="300" stroke="#1B1B1D" stroke-width="1" opacity="0.224"/>
+  <path d="M664 300 L650 128 L750 128 L736 300 Z" fill="#1B1B1D" opacity="0.82"/>
+  <g stroke="#FAF9F5" stroke-width=".9" opacity="0.132">
+    <path d="M660 168 L740 168"/><path d="M657 204 L743 204"/><path d="M653 240 L747 240"/><path d="M649 272 L751 272"/>
+  </g>
+  <path d="M640 128 L760 128 L760 104 L640 104 Z" fill="#1B1B1D" opacity="0.74"/>
+  <path d="M646 104 L754 104 L744 84 L656 84 Z" fill="#1B1B1D" opacity="0.86"/>
+  <path d="M700 100 L700 90" stroke="#1B1B1D" stroke-width="1.4" opacity="0.6"/>
+  <g fill="#1B1B1D" opacity="0.5">
+    <path d="M602 300 C 620 291 638 289 654 293 C 666 296 674 298 684 300 Z"/>
+    <path d="M722 300 C 738 292 754 290 768 294 C 778 297 786 299 794 300 Z"/>
+  </g>
+  <g class="beam">
+    <path d="M700 100 L360 56 L360 144 Z" fill="url(#l-beam)" style="transform-origin: 700px 100px"/>
+    <path d="M700 100 L1040 56 L1040 144 Z" fill="url(#l-beam)" style="transform-origin: 700px 100px"/>
+  </g>
+  <circle class="lamp" cx="700" cy="100" r="5.5" fill="#B0502A"/>
+  <circle cx="700" cy="100" r="26" fill="#B0502A" opacity="0.132"/>
+  <g class="tide-a" fill="none" stroke="#1B1B1D" stroke-linecap="round">
+    <path d="M-30 322 C 140 314 300 330 480 322 S 780 310 960 322 S 1160 328 1230 318" stroke-width="1.2" opacity="0.264"/>
+    <path d="M-30 348 C 160 340 340 356 520 348 S 820 336 1000 348 S 1160 352 1230 344" stroke-width="1" opacity="0.158"/>
+    <path d="M-30 374 C 180 368 380 378 560 372 S 860 362 1040 372 S 1170 374 1230 370" stroke-width=".9" opacity="0.106"/>
+  </g>
+  <g stroke="#1B1B1D" stroke-width="1.1" fill="none" opacity="0.34" stroke-linecap="round">
+    <path d="M300 214 C 308 207 314 207 320 213 C 326 207 332 207 340 214"/>
+    <path d="M376 188 C 382 183 387 183 392 188"/>
+  </g>
+</svg>

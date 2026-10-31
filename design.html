@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>设计语言「墨潮」· 学海 3.0.0</title>
+<meta name="description" content="纸、墨、赭陶与六种 8% 的纸色。设计语言 v3「墨潮」的施工图：八景插画、字阶、色板、潮汐节拍、材料与影、四时世界。">
+<meta name="theme-color" content="#FAF9F5">
+<meta name="view-transition" content="same-origin">
+<script>document.documentElement.classList.add('js');</script>
+<link rel="icon" href="assets/img/appicon-32.png" sizes="32x32">
+<link rel="icon" href="assets/img/appicon-192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="assets/img/appicon-180.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="设计语言「墨潮」· 学海 3.0.0">
+<meta property="og:description" content="纸、墨、赭陶与六种 8% 的纸色。设计语言 v3「墨潮」的施工图：八景插画、字阶、色板、潮汐节拍、材料与影、四时世界。">
+<link rel="canonical" href="https://doctor-who-134.github.io/xuehai-site/design.html">
+<meta property="og:url" content="https://doctor-who-134.github.io/xuehai-site/design.html">
+<meta property="og:image" content="https://doctor-who-134.github.io/xuehai-site/assets/img/og-cover.png">
+<meta property="og:site_name" content="学海">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body class="page-design">
+<a class="skip" href="#main">跳到正文</a>
+<div class="world-glow" aria-hidden="true"></div>
+
+<header class="site-head">
+  <div class="head-in">
+    <a class="brand" href="index.html" aria-label="学海官网首页">
+      <img class="brand-mark" src="assets/img/appicon-64.png" width="32" height="32" alt="" aria-hidden="true">
+      <span class="brand-name">学海</span>
+      <span class="brand-sub">高考学习 · 3.0</span>
+    </a>
+
+    <nav class="head-nav" aria-label="主导航">
+      <a href="index.html">首页</a>
+      <a href="capability.html">能力</a>
+      <a href="design.html" aria-current="page">设计</a>
+      <a href="download.html">下载</a>
+      <a href="changelog.html">航行日志</a>
+      <a href="about.html">关于</a>
+    </nav>
+
+    <div class="head-tools">
+      <span class="now-chip"><i aria-hidden="true"></i>此刻 · <span data-now>午后</span></span>
+      <button class="icon-btn" type="button" data-theme-btn aria-label="切到夜读" aria-pressed="false">
+        <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.2A8 8 0 1 1 9.8 4a6.6 6.6 0 0 0 10.2 10.2Z"/></svg>
+      </button>
+      <button class="search-btn" type="button" data-palette-open aria-label="打开快速跳转（⌘K）">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.6"/><path d="M15.6 15.6 20 20"/></svg>
+        <span>快速跳转</span><kbd>⌘K</kbd>
+      </button>
+      <a class="btn-dl" href="download.html">
+        <span>下载</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7.5 10.5 12 15l4.5-4.5M5 19h14"/></svg>
+      </a>
+      <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-label="展开导航">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="dock" aria-label="移动导航">
+  <a href="index.html">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-4.5v-6h-5v6H5a1 1 0 0 1-1-1z"/></svg>
+    <span>首页</span>
+  </a>
+  <a href="capability.html">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="1.4"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.4"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.4"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.4"/></svg>
+    <span>能力</span>
+  </a>
+  <a href="design.html" aria-current="page">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c5 0 8.5 3.4 8.5 7.4 0 2.6-1.8 4.1-3.9 4.1h-1.5c-1.2 0-2 .9-2 1.9 0 .5.2 1 .4 1.4.2.3.3.6.3.9 0 .9-.9 1.6-2.2 1.6-4.6 0-8.1-4.1-8.1-9 0-4.6 3.9-8.3 8.5-8.3Z"/><circle cx="8.4" cy="9.2" r=".9" fill="currentColor" stroke="none"/><circle cx="12" cy="7.4" r=".9" fill="currentColor" stroke="none"/><circle cx="15.4" cy="9.4" r=".9" fill="currentColor" stroke="none"/></svg>
+    <span>设计</span>
+  </a>
+  <a href="download.html">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7.5 10.5 12 15l4.5-4.5M5 19h14"/></svg>
+    <span>下载</span>
+  </a>
+  <button type="button" data-palette-open aria-label="快速跳转">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.6"/><path d="M15.6 15.6 20 20"/></svg>
+    <span>跳转</span>
+  </button>
+</nav>
+
+<main id="main">
+<section class="ds-hero">
+  <div class="wrap-wide">
+    <p class="eyebrow" data-reveal>设计语言 v3 · 墨潮</p>
+    <h1 class="h1" data-reveal data-delay="1" style="margin-top:18px;max-width:20em">纸、墨、赭陶，<br>以及一整天</h1>
+    <p class="lead mt-3" data-reveal data-delay="2" style="max-width:44em">3.0 的界面只留三种材料：纸、墨、赭陶；再给六科各一层低饱和的纸色。这一页是这套语言的施工图：八景、字阶、色板、节拍、材料、世界。</p>
+    <div class="ds-toc mt-4" data-reveal data-delay="3">
+      <a href="#art">01 八景插画</a>
+      <a href="#type">02 字阶</a>
+      <a href="#color">03 色面</a>
+      <a href="#motion">04 潮汐节拍</a>
+      <a href="#material">05 材料与影</a>
+      <a href="#world">06 世界与时间</a>
+    </div>
+  </div>
+</section>
+
+<section class="sect-tight" id="art">
+  <div class="wrap-wide">
+    <div class="sec-head" data-reveal>
+      <p class="folio-num">01 · 插画</p>
+      <h2 class="h1">同一片海，八种时刻</h2>
+      <p class="lead">八景共享同一条潮位线与三层墨：远山雾、三层潮线、主体剪影，一景只有一个赭陶实心点。纯代码绘制，零图片、零依赖，离线也能看；画里的雾会流、潮会退、帆会晃、星会闪、灯会扫、苇会摇。</p>
+    </div>
+
+    <div class="ds-scenes mt-5">
+      <figure class="ds-scene wash-ochre" data-reveal><img src="assets/art/dawn.svg" width="1200" height="420" alt="晨潮：初日、帆与三层潮线，雾在流动" loading="lazy"><figcaption><b>晨潮 · dawn</b><span>今日日间 / 登录 · 一天从这里开</span></figcaption></figure>
+      <figure class="ds-scene wash-indigo" data-reveal data-delay="1"><img src="assets/art/nightSea.svg" width="1200" height="420" alt="夜航：月、星、帆与夜色海面，星在闪" loading="lazy"><figcaption><b>夜航 · nightSea</b><span>今日夜间 / 引导 · 夜深的那一页</span></figcaption></figure>
+      <figure class="ds-scene wash-slate" data-reveal><img src="assets/art/mountains.svg" width="1200" height="420" alt="书山：两重山脊、雾与飞鸟" loading="lazy"><figcaption><b>书山 · mountains</b><span>成长 / 知识 / 报告 · 往上走</span></figcaption></figure>
+      <figure class="ds-scene wash-umber" data-reveal data-delay="1"><img src="assets/art/lighthouse.svg" width="1200" height="420" alt="灯塔：塔、灯与扫动的光束" loading="lazy"><figcaption><b>灯塔 · lighthouse</b><span>成就 · 远处的坐标</span></figcaption></figure>
+      <figure class="ds-scene wash-moss" data-reveal><img src="assets/art/islands.svg" width="1200" height="420" alt="渡海：五座踏石岛与舟" loading="lazy"><figcaption><b>渡海 · islands</b><span>英语分段 · 一段一段过去</span></figcaption></figure>
+      <figure class="ds-scene wash-indigo" data-reveal data-delay="1"><img src="assets/art/waves.svg" width="1200" height="420" alt="三道潮：三道潮线与小舟" loading="lazy"><figcaption><b>三道潮 · waves</b><span>练习页头 / 听力 · 潮一涨就开题</span></figcaption></figure>
+      <figure class="ds-scene wash-moss" data-reveal><img src="assets/art/reeds.svg" width="1200" height="420" alt="芦苇：五茎芦苇与风" loading="lazy"><figcaption><b>芦苇 · reeds</b><span>复盘 / 空态 · 还没有错题时</span></figcaption></figure>
+      <figure class="ds-scene wash-red" data-reveal data-delay="1"><img src="assets/art/seal.svg" width="1200" height="420" alt="印：方印与缺角" loading="lazy"><figcaption><b>印 · seal</b><span>我的 / 身份卡 · 一个章</span></figcaption></figure>
+    </div>
+
+    <div class="note mt-5" data-reveal>
+      <p><strong>画法纪律：</strong>用一个墨色家族的三个明度，线条圆头，端点为 0.5px 对齐；装饰性插画用 <code>ExcludeSemantics</code> 包裹，删掉它，页面信息与操作 100% 成立。同一页最多两处，只在页头与空态，绝不进表单与答案区。</p>
+    </div>
+  </div>
+</section>
+
+<section class="sect-tight" id="type">
+  <div class="wrap-wide">
+    <div class="sec-head" data-reveal>
+      <p class="folio-num">02 · 字阶</p>
+      <h2 class="h1">一屏一事，靠留白撑气</h2>
+      <p class="lead">标题用宋，正文用黑，引文用楷。同屏计层级的只有 display / h1 / h2 / body 四档，相邻比全部 ≥1.4；注与标签不走档比，只保证读得懂。</p>
+    </div>
+
+    <div class="ds-typescale mt-5">
+      <div class="ds-type-row" data-reveal>
+        <div class="ds-type-meta"><span>display</span><span>52–172 / 宋 700</span></div>
+        <div class="ds-type-sample" style="font-family:var(--serif);font-size:64px;line-height:1.05">学海 · 长风破浪</div>
+      </div>
+      <div class="ds-type-row" data-reveal>
+        <div class="ds-type-meta"><span>h1</span><span>30–50 / 宋 700</span></div>
+        <div class="ds-type-sample" style="font-family:var(--serif);font-size:36px;line-height:1.25">把「判不出来」和「答错」分开</div>
+      </div>
+      <div class="ds-type-row" data-reveal>
+        <div class="ds-type-meta"><span>h2</span><span>22–31 / 宋 700</span></div>
+        <div class="ds-type-sample" style="font-family:var(--serif);font-size:25px;line-height:1.4">今天先做哪一件</div>
+      </div>
+      <div class="ds-type-row" data-reveal>
+        <div class="ds-type-meta"><span>body</span><span>16–17 / 黑 400 · 行高 1.9</span></div>
+        <div class="ds-type-sample" style="font-size:17px;line-height:1.9">判不出的题，不再算你错。每一次作答留一条不可变事件：来源、指纹、时间戳。</div>
+      </div>
+      <div class="ds-type-row" data-reveal>
+        <div class="ds-type-meta"><span>caption / label</span><span>12 / 11 · 类目与注</span></div>
+        <div class="ds-type-sample"><span class="caption">版本 v1.0 · 2026-10-25 生效</span> <span class="label" style="margin-left:18px">SIX SUBJECTS</span></div>
+      </div>
+      <div class="ds-type-row" data-reveal>
+        <div class="ds-type-meta"><span>quote</span><span>21–28 / 楷</span></div>
+        <div class="ds-type-sample quote">明落风还好，兴即往，意闲才。</div>
+      </div>
+    </div>
+    <p class="small mt-3" data-reveal>字体全部来自系统栈：宋（Songti SC → STSong → Noto Serif SC）、黑（PingFang SC → Noto Sans SC）、楷（Kaiti SC → 霞鹜文楷）。零外链，断网可用，也不给页面加一次网络请求。</p>
+  </div>
+</section>
+
+<section class="sect-tight" id="color">
+  <div class="wrap-wide">
+    <div class="sec-head" data-reveal>
+      <p class="folio-num">03 · 色面</p>
+      <h2 class="h1">三层纸 + 六色 wash</h2>
+      <p class="lead">纸承载 80% 面积，墨只给主行动与结论，赭陶只做「点」：编号、印章、潮位钉、链接。六种低饱和纸色只做背景面，不做文字色。</p>
+    </div>
+
+    <div class="split-even mt-5">
+      <div data-reveal>
+        <p class="label">三层纸</p>
+        <div class="ds-swatch-grid mt-3" style="grid-template-columns:repeat(3,1fr)">
+          <div class="ds-swatch"><div class="chip" style="background:#FAF9F5"></div><div class="meta"><b>纸</b><span>#FAF9F5</span></div></div>
+          <div class="ds-swatch"><div class="chip" style="background:#F3F1EA"></div><div class="meta"><b>次级纸</b><span>#F3F1EA</span></div></div>
+          <div class="ds-swatch"><div class="chip" style="background:#FFFEFB"></div><div class="meta"><b>浮起纸片</b><span>#FFFEFB</span></div></div>
+        </div>
+        <p class="label mt-4">赭陶 · 天青 · 夯土</p>
+        <div class="ds-swatch-grid mt-3" style="grid-template-columns:repeat(3,1fr)">
+          <div class="ds-swatch"><div class="chip" style="background:#AE4E27"></div><div class="meta"><b>赭陶</b><span>#AE4E27</span></div></div>
+          <div class="ds-swatch"><div class="chip" style="background:#2A5F63"></div><div class="meta"><b>天青</b><span>#2A5F63</span></div></div>
+          <div class="ds-swatch"><div class="chip" style="background:#8A6A4A"></div><div class="meta"><b>夯土</b><span>#8A6A4A</span></div></div>
+        </div>
+      </div>
+      <div data-reveal data-delay="1">
+        <p class="label">六科 wash</p>
+        <div class="ds-swatch-grid mt-3">
+          <div class="ds-swatch"><div class="chip" style="background:#F7E4DE"></div><div class="meta"><b>语文</b><span>#F7E4DE</span></div></div>
+          <div class="ds-swatch"><div class="chip" style="background:#F7EBDC"></div><div class="meta"><b>数学</b><span>#F7EBDC</span></div></div>
+          <div class="ds-swatch"><div class="chip" style="background:#E8EDF5"></div><div class="meta"><b>英语</b><span>#E8EDF5</span></div></div>
+          <div class="ds-swatch"><div class="chip" style="background:#E8EFE5"></div><div class="meta"><b>政治</b><span>#E8EFE5</span></div></div>
+          <div class="ds-swatch"><div class="chip" style="background:#F1E9DE"></div><div class="meta"><b>历史</b><span>#F1E9DE</span></div></div>
+          <div class="ds-swatch"><div class="chip" style="background:#E6EEEC"></div><div class="meta"><b>地理</b><span>#E6EEEC</span></div></div>
+        </div>
+        <div class="wash-panel wash-moss mt-4">
+          <p class="h3">一屏的配比</p>
+          <p class="small mt-2">纸 70–85% ／ 墨 5–15% ／ 赭 ≤5% ／ wash ≤12%。wash 只做背景面：章节标记、统计块底、成就徽章面；同屏最多两种。超配即回退。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="subjects mt-5" data-reveal>
+      <span class="subject wash-red"><i aria-hidden="true"></i>语文</span>
+      <span class="subject wash-ochre"><i aria-hidden="true"></i>数学</span>
+      <span class="subject wash-indigo"><i aria-hidden="true"></i>英语</span>
+      <span class="subject wash-moss"><i aria-hidden="true"></i>政治</span>
+      <span class="subject wash-umber"><i aria-hidden="true"></i>历史</span>
+      <span class="subject wash-slate"><i aria-hidden="true"></i>地理</span>
+    </div>
+  </div>
+</section>
+
+<section class="sect-tight" id="motion">
+  <div class="wrap-wide">
+    <div class="sec-head" data-reveal>
+      <p class="folio-num">04 · 节拍</p>
+      <h2 class="h1">八个节拍，只解释状态</h2>
+      <p class="lead">动效只回答三件事：从哪里来、发生了什么、可以去哪。只动 opacity 与 transform；同一屏最多两组动画；尊重系统「减少动态」，为真时一步到位。</p>
+    </div>
+
+    <div class="table-wrap mt-5" data-reveal>
+      <table class="table">
+        <thead><tr><th scope="col">节拍</th><th scope="col">时长</th><th scope="col">曲线</th><th scope="col">用在哪</th></tr></thead>
+        <tbody>
+          <tr><td>enter</td><td class="num-cell">420ms</td><td>soft-out</td><td>页面主块入场：淡入 + 上移 8px</td></tr>
+          <tr><td>reveal</td><td class="num-cell">360ms</td><td>soft-out</td><td>次块/列表首屏，stagger 32ms 递进，最多 6 项</td></tr>
+          <tr><td>stamp</td><td class="num-cell">260ms</td><td>soft-out</td><td>正确印章：1.45→1 缩放 + 淡入</td></tr>
+          <tr><td>shake</td><td class="num-cell">240ms</td><td>damped</td><td>答错：±2px 三次衰减</td></tr>
+          <tr><td>burst</td><td class="num-cell">520ms</td><td>soft-out</td><td>成就/里程碑：8 枚墨点径向散开</td></tr>
+          <tr><td>tideDraw</td><td class="num-cell">420ms</td><td>soft-out</td><td>潮线从左画出 + 潮位钉落位</td></tr>
+          <tr><td>numberRoll</td><td class="num-cell">620ms</td><td>soft-out</td><td>统计数字 0→值（等宽数字，读屏只报终值）</td></tr>
+          <tr><td>ambient</td><td class="num-cell">8000ms</td><td>linear</td><td>主插画潮汐相位（可关）</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note mt-4" data-reveal>
+      <p><strong>禁止的事：</strong>列表滚动视差、整页背景动画、hover 里超过 2px 的位移链、动效遮挡点击区域、200ms 内连续触发两次同组动画。本网站额外加了两条：页顶潮位只读进度；所有插画动画在「减少动态」时静止。</p>
+    </div>
+  </div>
+</section>
+
+<section class="sect-tight" id="material">
+  <div class="wrap-wide">
+    <div class="sec-head" data-reveal>
+      <p class="folio-num">05 · 材料</p>
+      <h2 class="h1">只有「抬得起来」的面才有影</h2>
+      <p class="lead">纯平纸在整屏尺度上读作线框。3.0 允许有理由的深度：卡片、纸页、侧栏、面板才有影；列表行与输入框不加影；卡片里不再套卡片投影。</p>
+    </div>
+
+    <div class="ds-materials mt-5">
+      <div class="ds-mat" data-reveal>
+        <p class="label">圆角四档</p>
+        <div class="ds-mat__row"><span class="ds-mat__chip">8</span><span>control · 按钮、输入框、分段器</span></div>
+        <div class="ds-mat__row"><span class="ds-mat__chip ds-mat__chip--card">14</span><span>card · 卡片、统计块</span></div>
+        <div class="ds-mat__row"><span class="ds-mat__chip ds-mat__chip--sheet">20</span><span>sheet · 浮起纸页、玻璃面板</span></div>
+        <div class="ds-mat__row"><span class="ds-mat__chip ds-mat__chip--hero">28</span><span>hero · 主视觉、下载卡</span></div>
+      </div>
+      <div class="ds-mat" data-reveal data-delay="1">
+        <p class="label">暖影三档</p>
+        <div class="ds-mat__bar ds-mat__bar--soft mt-2">soft · 普通卡片</div>
+        <div class="ds-mat__bar ds-mat__bar--lifted mt-2">lifted · hover 卡片</div>
+        <div class="ds-mat__bar ds-mat__bar--floating mt-2">floating · 浮起纸页、面板</div>
+        <p class="small mt-3">影色带暖墨，不用纯黑；夜里同一组影仍成立。</p>
+      </div>
+      <div class="ds-mat" data-reveal>
+        <p class="label">玻璃只给两处</p>
+        <p class="body mt-2">玻璃只出现在外壳侧栏与命令面板（backdrop blur 22–26px + 纸色 80–94% 不透明度）。内容页不用玻璃，也不把玻璃叠在内容卡片上。</p>
+      </div>
+      <div class="ds-mat" data-reveal data-delay="1">
+        <p class="label">卡片的纪律</p>
+        <p class="body mt-2">一张纸里只允许发线与 wash，不再叠第二层投影；卡片不套卡片。hover 抬升最多 4px，200ms 内完成。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sect-tight" id="world">
+  <div class="wrap-wide">
+    <div class="sec-head" data-reveal>
+      <p class="folio-num">06 · 世界</p>
+      <h2 class="h1">世界是背景，不是主角</h2>
+      <p class="lead">四时四色由真实时间驱动：清晨 5–8、午后 8–17、黄昏 17–20、夜深其余。天光渐变 + 两团墨雾 + 一处暖光 + 纸纹；只在壳层与主视觉页出现，内容页仍是纸底，保住阅读对比。</p>
+    </div>
+
+    <div class="ds-world mt-5">
+      <div class="ds-world-card" data-reveal><div class="sky sky--dawn"></div><div class="meta"><b>清晨</b><span>5:00 – 8:00 · 暖光在左</span></div></div>
+      <div class="ds-world-card" data-reveal data-delay="1"><div class="sky sky--day"></div><div class="meta"><b>午后</b><span>8:00 – 17:00 · 一处高光</span></div></div>
+      <div class="ds-world-card" data-reveal data-delay="2"><div class="sky sky--dusk"></div><div class="meta"><b>黄昏</b><span>17:00 – 20:00 · 赭陶在右下</span></div></div>
+      <div class="ds-world-card" data-reveal data-delay="3"><div class="sky sky--night"></div><div class="meta"><b>夜深</b><span>20:00 – 5:00 · 灯下一张纸</span></div></div>
+    </div>
+
+    <div class="note mt-4" data-reveal>
+      <p><strong>删掉世界，页面仍然成立。</strong>世界不承载信息：把天光换成纸底、把雾与暖光全部关掉，页面信息与操作 100% 不变。这一条是验收里最硬的一条，也是这套设计不抢注意力的原因。</p>
+    </div>
+
+    <div class="btn-row mt-5" data-reveal>
+      <a class="btn" href="download.html">下载 macOS 3.0.0</a>
+      <a class="btn btn--ghost" href="index.html#design">回到首页看八景与六色</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap-wide">
+    <div class="foot-in">
+      <div class="foot-brand">
+        <a class="brand" href="index.html" aria-label="学海官网首页">
+          <img class="brand-mark" src="assets/img/appicon-64.png" width="32" height="32" alt="" aria-hidden="true">
+          <span class="brand-name">学海</span>
+        </a>
+        <p>高考学习系统 · 设计语言 v3「墨潮」。题库与知识点为自有内容；做题记录只存在本机，导出由你决定。</p>
+      </div>
+      <div class="foot-col">
+        <h4>站内</h4>
+        <ul>
+          <li><a href="capability.html">能力</a></li>
+          <li><a href="design.html">设计语言</a></li>
+          <li><a href="download.html">下载</a></li>
+          <li><a href="changelog.html">航行日志</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>条款</h4>
+        <ul>
+          <li><a href="about.html">关于学海</a></li>
+          <li><a href="about.html#licenses">许可与来源</a></li>
+          <li><a href="legal/privacy.html">隐私政策</a></li>
+          <li><a href="legal/terms.html">用户协议</a></li>
+          <li><a href="legal/minor.html">未成年人模式</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>此刻</h4>
+        <ul>
+          <li><span class="small"><span data-now>午后</span> · 天光随真实时间</span></li>
+          <li><button class="text-link" type="button" data-palette-open>快速跳转 <kbd class="kbd-inline">⌘K</kbd></button></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>© <span data-year>2026</span> 学海 · 高考学习</span>
+      <span class="dot" aria-hidden="true">·</span>
+      <span>3.0.0（构建 35）· 2026-10-31</span>
+      <span class="dot" aria-hidden="true">·</span>
+      <span>预览版 · 应用内测中</span>
+    </div>
+  </div>
+</footer>
+
+<!-- 命令面板 -->
+<div class="palette" aria-hidden="true">
+  <div class="palette-panel" role="dialog" aria-modal="true" aria-label="快速跳转">
+    <div class="palette-input">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.6"/><path d="M15.6 15.6 20 20"/></svg>
+      <input type="text" placeholder="跳到哪里？输入页面名或关键词" aria-label="搜索目的地" autocomplete="off">
+    </div>
+    <ul class="palette-list" role="listbox" aria-label="目的地"></ul>
+    <div class="palette-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 选择</span><span><kbd>↵</kbd> 打开</span><span><kbd>esc</kbd> 关闭</span></div>
+  </div>
+</div>
+
+<!-- 光箱 -->
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="查看原图">
+  <button class="lightbox-close" type="button" aria-label="关闭">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+  </button>
+  <img alt="">
+</div>
+
+<script src="assets/js/site.js"></script>
+</body>
+</html>
