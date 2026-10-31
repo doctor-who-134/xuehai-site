@@ -1,0 +1,15 @@
+{
+  "name": "学海 · 高考学习系统",
+  "short_name": "学海",
+  "description": "把「判不出来」和「答错」分开。",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#FAFAF8",
+  "theme_color": "#FAFAF8",
+  "lang": "zh-CN",
+  "icons": [
+    { "src": "assets/img/appicon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/img/appicon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

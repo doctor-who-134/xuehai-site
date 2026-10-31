@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" role="img" aria-label="渡海：五座踏石岛与舟，潮水在退">
+  <defs>
+    <linearGradient id="i-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1B1B1D" stop-opacity="0"/>
+      <stop offset="1" stop-color="#1B1B1D" stop-opacity="0.066"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .tide-a { animation: tide-a 15s ease-in-out infinite alternate; }
+    .tide-b { animation: tide-b 22s ease-in-out infinite alternate; }
+    .boat { animation: bob 7.5s ease-in-out infinite alternate; }
+    .mist { animation: mist 28s ease-in-out infinite alternate; }
+    @keyframes tide-a { from { transform: translateX(0); } to { transform: translateX(-10px); } }
+    @keyframes tide-b { from { transform: translateX(0); } to { transform: translateX(8px); } }
+    @keyframes bob { from { transform: translateY(0) rotate(0deg); } to { transform: translateY(-2.2px) rotate(.45deg); } }
+    @keyframes mist { from { transform: translateX(0); } to { transform: translateX(18px); } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+  <rect width="1200" height="420" fill="url(#i-sky)"/>
+  <g class="mist">
+    <path d="M-20 200 C 220 194 420 204 620 198 S 940 190 1140 196" stroke="#1B1B1D" stroke-width="7" fill="none" opacity="0.053"/>
+  </g>
+  <line x1="0" y1="300" x2="1200" y2="300" stroke="#1B1B1D" stroke-width="1" opacity="0.198"/>
+  <g fill="#1B1B1D">
+    <ellipse cx="150" cy="300" rx="66" ry="7" opacity="0.211"/>
+    <path d="M96 300 C 112 264 148 253 194 260 C 220 264 232 278 240 300 Z" opacity="0.6"/>
+    <path d="M336 300 C 348 274 372 268 402 272 C 420 275 430 286 434 300 Z" opacity="0.54"/>
+    <path d="M506 300 C 516 282 534 277 558 280 C 572 283 580 290 583 300 Z" opacity="0.62"/>
+    <path d="M700 300 C 712 274 738 267 770 272 C 790 275 800 285 805 300 Z" opacity="0.54"/>
+    <path d="M896 300 C 912 266 944 256 986 263 C 1012 267 1024 280 1030 300 Z" opacity="0.64"/>
+  </g>
+  <g stroke="#1B1B1D" fill="none" stroke-width=".9" opacity="0.343">
+    <path d="M148 288 C 156 281 162 279 170 283 M164 286 C 172 279 180 277 188 281"/>
+    <path d="M330 292 C 336 286 342 284 350 288"/>
+    <path d="M744 290 C 752 283 758 281 766 285 M760 288 C 768 282 776 280 784 284"/>
+    <path d="M934 280 C 942 273 948 271 956 275"/>
+  </g>
+  <g class="tide-a" fill="none" stroke="#1B1B1D" stroke-linecap="round">
+    <path d="M-30 330 C 160 322 340 338 520 330 S 820 318 1000 330 S 1160 334 1230 326" stroke-width="1.1" opacity="0.211"/>
+    <path d="M-30 356 C 180 348 380 364 560 356 S 860 344 1040 356 S 1170 358 1230 352" stroke-width="1" opacity="0.132"/>
+  </g>
+  <g class="tide-b" fill="none" stroke="#1B1B1D" stroke-linecap="round">
+    <path d="M-30 382 C 200 376 400 386 580 380 S 880 372 1060 380 S 1180 382 1230 378" stroke-width=".9" opacity="0.092"/>
+  </g>
+  <g class="boat">
+    <path d="M470 300 L470 250" stroke="#1B1B1D" stroke-width="1.2" opacity="0.72"/>
+    <path d="M471 253 C 491 260 501 271 506 287 L471 287 Z" fill="#1B1B1D" opacity="0.7"/>
+    <path d="M464 298 C 456 300 450 302 444 305 C 458 308 476 309 496 306 C 488 302 480 299 470 298 Z" fill="#1B1B1D" opacity="0.58"/>
+    <ellipse cx="470" cy="309" rx="26" ry="1.8" fill="#1B1B1D" opacity="0.132"/>
+  </g>
+  <circle cx="984" cy="206" r="15" fill="#B0502A" opacity="0.95"/>
+  <circle cx="984" cy="206" r="46" fill="#B0502A" opacity="0.092"/>
+  <g stroke="#1B1B1D" stroke-width="1.1" fill="none" opacity="0.32" stroke-linecap="round">
+    <path d="M250 168 C 258 161 264 161 270 167 C 276 161 282 161 290 168"/>
+    <path d="M318 144 C 324 139 329 139 334 144"/>
+  </g>
+</svg>
