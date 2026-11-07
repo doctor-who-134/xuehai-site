@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>学海 · 影像与设计</title>
+<meta name="description" content="学海前端展示：MiniMax H3 生成影像、WebGL 实时墨潮、程序化等深线、滚动编排。浑厚 · 质朴 · 疏朗 · 天青。" />
+<meta name="theme-color" content="#EEEFEA" />
+<script>document.documentElement.classList.add('js');</script>
+<link rel="icon" href="../assets/img/appicon-32.png" sizes="32x32" />
+<link rel="stylesheet" href="assets/css/showcase.css" />
+<link rel="preload" as="image" href="assets/h3/web_fuchun.jpg" />
+</head>
+<body>
+
+<!-- ══ 生成式墨潮（WebGL，失败降级 canvas2D） ══ -->
+<canvas id="tide-gl" aria-hidden="true"></canvas>
+
+<!-- ══ SVG 滤镜：gooey 墨晕 / 纸纹 ══ -->
+<svg class="svg-defs" aria-hidden="true" width="0" height="0">
+  <defs>
+    <filter id="gooey">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="7" result="b" />
+      <feColorMatrix in="b" mode="matrix"
+        values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -9" result="g" />
+      <feBlend in="SourceGraphic" in2="g" />
+    </filter>
+    <filter id="inkgrain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.72" numOctaves="3" seed="7" result="n" />
+      <feColorMatrix in="n" type="saturate" values="0" />
+    </filter>
+  </defs>
+</svg>
+
+<div class="ink-splash" aria-hidden="true"></div>
+
+<!-- ══ 导航 ══ -->
+<header class="nav" id="nav">
+  <div class="nav__in">
+    <a class="brand" href="#top" aria-label="学海展示首页">
+      <span class="brand__seal" aria-hidden="true">海</span>
+      <span class="brand__name">学海</span>
+      <span class="brand__sub">影像与设计</span>
+    </a>
+    <nav class="nav__links" aria-label="主导航">
+      <a href="#film">一日</a>
+      <a href="#contours">等深线</a>
+      <a href="#features">功能</a>
+      <a href="#science">学习科学</a>
+      <a href="#design">设计</a>
+      <a href="download.html">下载</a>
+    </nav>
+    <a class="nav__back" href="../index.html">← 官网</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ══ 英雄 ══ -->
+  <section class="hero">
+    <!-- 气：低对比 H3 影像铺底 -->
+    <video class="hero__haze" data-src="assets/h3/web_fuchun.mp4" poster="assets/h3/web_fuchun.jpg"
+           muted playsinline loop preload="none" aria-hidden="true"></video>
+    <div class="hero__wash" aria-hidden="true"></div>
+
+    <div class="hero__in wrap">
+      <div class="hero__copy">
+        <p class="eyebrow reveal" data-r="up">MiniMax H3 生成影像 · 实时渲染</p>
+        <h1 class="hero__title reveal" data-r="up" data-d="80">学海</h1>
+        <p class="hero__lead reveal" data-r="up" data-d="160">
+          七万六千题在本地，AI 按遗忘曲线排程，离线照常刷题。<br />
+          这里展示的每一帧影像，都由本机 MiniMax H3 生成。
+        </p>
+        <div class="hero__actions reveal" data-r="up" data-d="240">
+          <a class="btn btn--solid" href="#film">看一日</a>
+          <a class="btn btn--ghost" href="#design">看设计纪律</a>
+        </div>
+        <ul class="hero__facts reveal" data-r="up" data-d="320">
+          <li><b>76,794</b> 题本地题库</li>
+          <li><b>28</b> 支 H3 影像</li>
+          <li><b>5</b> 端一致</li>
+        </ul>
+      </div>
+
+      <!-- 主体量：清晰 H3 影像，偏席不居中 -->
+      <figure class="hero__mass reveal" data-r="scale" data-d="120">
+        <video data-src="assets/h3/web_dawnsail.mp4" poster="assets/h3/web_dawnsail.jpg"
+               muted playsinline loop preload="none" aria-label="H3 生成影像：晨潮帆影"></video>
+        <span class="hero__mass-mark" aria-hidden="true">晨潮 · 帆影</span>
+        <figcaption>H3 影像 · 800×448 · 24fps · 首帧 <span class="dot"></span> 本机生成</figcaption>
+      </figure>
+    </div>
+
+    <a class="scroll-cue" href="#film" aria-label="向下滚动"><span></span>向下</a>
+  </section>
+
+  <!-- ══ 数据带 ══ -->
+  <section class="facts" id="facts">
+    <div class="wrap facts__grid">
+      <div class="fact reveal" data-r="up"><div class="fact__n"><span class="count" data-to="76794" data-sep="1">0</span></div><p>本地题库题量</p></div>
+      <div class="fact reveal" data-r="up" data-d="80"><div class="fact__n"><span class="count" data-to="28" data-suffix=" 支">0</span></div><p>H3 生成影像</p></div>
+      <div class="fact reveal" data-r="up" data-d="160"><div class="fact__n"><span class="count" data-to="24" data-suffix=" 层">0</span></div><p>程序化等深线</p></div>
+      <div class="fact reveal" data-r="up" data-d="240"><div class="fact__n"><span class="count" data-to="100" data-suffix="%">0</span></div><p>离线可刷题</p></div>
+    </div>
+  </section>
+
+  <!-- ══ 电影级滚动：一日五幕 ══ -->
+  <section class="film" id="film" aria-label="从晨读到夜思">
+    <div class="film__stage">
+      <div class="film__frames" id="filmFrames">
+        <figure class="frame is-active" data-i="0">
+          <video data-src="assets/h3/web_dawnsail.mp4" poster="assets/h3/web_dawnsail.jpg" muted playsinline loop preload="none"></video>
+        </figure>
+        <figure class="frame" data-i="1">
+          <video data-src="assets/h3/web_fuchun.mp4" poster="assets/h3/web_fuchun.jpg" muted playsinline loop preload="none"></video>
+        </figure>
+        <figure class="frame" data-i="2">
+          <video data-src="assets/h3/web_fulltide.mp4" poster="assets/h3/web_fulltide.jpg" muted playsinline loop preload="none"></video>
+        </figure>
+        <figure class="frame" data-i="3">
+          <video data-src="assets/h3/web_dengxia.mp4" poster="assets/h3/web_dengxia.jpg" muted playsinline loop preload="none"></video>
+        </figure>
+        <figure class="frame" data-i="4">
+          <video data-src="assets/h3/web_tianqing.mp4" poster="assets/h3/web_tianqing.jpg" muted playsinline loop preload="none"></video>
+        </figure>
+      </div>
+      <div class="film__veil" aria-hidden="true"></div>
+
+      <div class="film__ui wrap">
+        <p class="film__kicker">一日 · 五幕</p>
+        <div class="film__captions" id="filmCaptions">
+          <article class="cap is-active" data-i="0"><span class="cap__t">晨</span><h2>一叶帆从雾里出来</h2><p>朗读百篇，跟读校正发音。影像随滚动渐次揭幕，不自动轮播。</p></article>
+          <article class="cap" data-i="1"><span class="cap__t">课</span><h2>青绿设色，一层层推远</h2><p>拍照搜题出同类变式；等深线把知识点分出层次。</p></article>
+          <article class="cap" data-i="2"><span class="cap__t">练</span><h2>一浪卷成</h2><p>76,794 题按学科分层，离线随包，弱网不卡。</p></article>
+          <article class="cap" data-i="3"><span class="cap__t">夜</span><h2>砚、笔与脚下星河</h2><p>复盘掌握度，明日排程由模型给出，不靠感觉。</p></article>
+          <article class="cap" data-i="4"><span class="cap__t">成</span><h2>雨过天青</h2><p>把每一次练习，都变成可测量的进步。</p></article>
+        </div>
+        <div class="film__rail" aria-hidden="true"><i id="filmBar"></i></div>
+        <div class="film__count"><b id="filmNow">01</b> / 05</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ 程序化等深线 ══ -->
+  <section class="section contours" id="contours">
+    <div class="wrap contours__grid">
+      <div class="contours__copy">
+        <p class="section__kicker reveal" data-r="up">等深线</p>
+        <h2 class="section__title reveal" data-r="up" data-d="60">纹，是算出来的</h2>
+        <p class="section__sub reveal" data-r="up" data-d="120">
+          24 层等深线由 v5 脚本生成几何，运行时由代码取路径、逐层描边。
+          不压正文，不抢主体，只在留白处留一层呼吸。
+        </p>
+        <dl class="contours__meta reveal" data-r="up" data-d="180">
+          <div><dt>来源</dt><dd>build_contour_library.py</dd></div>
+          <div><dt>网格</dt><dd>1000 × 1000</dd></div>
+          <div><dt>层级</dt><dd>49 层取 24</dd></div>
+          <div><dt>渲染</dt><dd>SVG 描边自绘 · 无位图</dd></div>
+        </dl>
+      </div>
+      <div class="contours__art reveal" data-r="scale" id="contourArt" aria-label="程序化生成的等深线"></div>
+    </div>
+  </section>
+
+  <!-- ══ 功能 ══ -->
+  <section class="section features" id="features">
+    <div class="wrap">
+      <header class="section__head reveal" data-r="up">
+        <p class="section__kicker">功能</p>
+        <h2 class="section__title">六件事，做到位</h2>
+        <p class="section__sub">不堆数量。每一项对应一个真实的学习动作。</p>
+      </header>
+      <div class="cards">
+        <article class="card reveal" data-r="up" data-bg="web_jiuzhang">
+          <div class="card__art"><svg viewBox="0 0 120 120" class="ico">
+            <rect x="22" y="34" width="76" height="56" rx="2" fill="none" stroke="currentColor" stroke-width="2.2"/>
+            <path d="M44 34 l6 -10 h20 l6 10" fill="none" stroke="currentColor" stroke-width="2.2"/>
+            <circle cx="60" cy="62" r="16" fill="none" stroke="currentColor" stroke-width="2.2"/>
+            <path class="ico__draw" d="M44 62 h32" stroke="var(--accent)" stroke-width="2.2"/>
+          </svg></div>
+          <h3>拍照搜题</h3><p>对准题目出解析与同类变式。离线八科随包可用。</p>
+        </article>
+        <article class="card reveal" data-r="up" data-d="70" data-bg="web_xinghe">
+          <div class="card__art"><svg viewBox="0 0 120 120" class="ico">
+            <path d="M60 30 C44 22 26 24 22 28 L22 92 C26 88 44 86 60 94 C76 86 94 88 98 92 L98 28 C94 24 76 22 60 30 Z" fill="none" stroke="currentColor" stroke-width="2.2"/>
+            <path class="ico__draw" d="M60 30 L60 94" stroke="var(--accent)" stroke-width="2.2"/>
+            <path d="M74 40 l0 26 l8 -6 l8 6 l0 -26 Z" fill="var(--accent)"/>
+          </svg></div>
+          <h3>单词本</h3><p>阅读中长按取词入本，FSRS 按遗忘曲线排复习。</p>
+        </article>
+        <article class="card reveal" data-r="up" data-d="140" data-bg="web_tingyu">
+          <div class="card__art"><svg viewBox="0 0 120 120" class="ico">
+            <path d="M60 30 C44 30 38 44 40 58 C42 72 50 80 52 92 C53 100 67 100 68 92 C70 80 78 72 80 58 C82 44 76 30 60 30 Z" fill="none" stroke="currentColor" stroke-width="2.2"/>
+            <g class="ico__bars" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="round">
+              <line x1="40" y1="58" x2="32" y2="58"/><line x1="80" y1="58" x2="88" y2="58"/>
+              <line x1="34" y1="50" x2="27" y2="50"/><line x1="86" y1="50" x2="93" y2="50"/>
+              <line x1="34" y1="66" x2="27" y2="66"/><line x1="86" y1="66" x2="93" y2="66"/>
+            </g>
+          </svg></div>
+          <h3>听力</h3><p>百篇分级材料，逐句跟读与听写，语速循环自由调。</p>
+        </article>
+        <article class="card reveal" data-r="up" data-d="210" data-bg="web_jiuzhang">
+          <div class="card__art"><svg viewBox="0 0 120 120" class="ico">
+            <line x1="20" y1="60" x2="100" y2="60" stroke="currentColor" stroke-width="2.2"/>
+            <line x1="60" y1="20" x2="60" y2="100" stroke="currentColor" stroke-width="2.2"/>
+            <path class="ico__draw" d="M24 92 C40 88 46 40 60 38 C74 36 82 64 96 28" fill="none" stroke="var(--accent)" stroke-width="2.6" stroke-linecap="round"/>
+          </svg></div>
+          <h3>函数图</h3><p>输入表达式即时绘制，切线、零点、区间着色一目了然。</p>
+        </article>
+        <article class="card reveal" data-r="up" data-d="280" data-bg="web_kongshan">
+          <div class="card__art"><svg viewBox="0 0 120 120" class="ico">
+            <rect x="30" y="26" width="60" height="10" rx="1" fill="none" stroke="currentColor" stroke-width="2.2"/>
+            <rect x="30" y="44" width="60" height="10" rx="1" fill="none" stroke="currentColor" stroke-width="2.2"/>
+            <rect x="30" y="62" width="60" height="10" rx="1" fill="none" stroke="currentColor" stroke-width="2.2"/>
+            <rect class="ico__shelf" x="30" y="80" width="60" height="10" rx="1" fill="var(--accent)"/>
+          </svg></div>
+          <h3>资源库</h3><p>知识库、卷宗、真题分层归置，按章节反查题目。</p>
+        </article>
+        <article class="card reveal" data-r="up" data-d="350" data-bg="web_whale">
+          <div class="card__art"><svg viewBox="0 0 120 120" class="ico">
+            <path d="M60 96 L60 56" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+            <path class="ico__draw" d="M60 60 C44 56 38 40 42 28 C58 30 66 44 60 60 Z" fill="none" stroke="var(--accent)" stroke-width="2.2"/>
+            <path class="ico__draw" d="M60 66 C76 62 82 46 78 34 C62 36 54 50 60 66 Z" fill="none" stroke="currentColor" stroke-width="2.2"/>
+            <path d="M40 96 q20 -8 40 0" fill="none" stroke="currentColor" stroke-width="2.2"/>
+          </svg></div>
+          <h3>成长</h3><p>掌握度、薄弱点、时间投入一张图看清，复习不盲目。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ 学习科学 ══ -->
+  <section class="section science" id="science">
+    <div class="wrap science__grid">
+      <div>
+        <header class="section__head reveal" data-r="up">
+          <p class="section__kicker">学习科学</p>
+          <h2 class="section__title">让努力可测量</h2>
+          <p class="section__sub">四步闭环，把「刷题」变成「长记性」。</p>
+        </header>
+        <ol class="steps">
+          <li class="reveal" data-r="up"><b>观察</b> 每次作答记入证据，不靠感觉估掌握度。</li>
+          <li class="reveal" data-r="up" data-d="70"><b>建模</b> BKT 估每知识点「会」的概率，FSRS 拟合遗忘曲线。</li>
+          <li class="reveal" data-r="up" data-d="140"><b>排程</b> 在快忘未忘的临界点推送，复习量小、留存高。</li>
+          <li class="reveal" data-r="up" data-d="210"><b>复习</b> 测后回估模型，下一轮更准。</li>
+        </ol>
+      </div>
+      <div class="science__viz reveal" data-r="scale">
+        <svg viewBox="0 0 320 320" class="loop" role="img" aria-label="学习科学四步闭环">
+          <circle cx="160" cy="160" r="120" fill="none" stroke="#C9CBC1" stroke-width="1.2"/>
+          <circle cx="160" cy="160" r="120" fill="none" stroke="#6BA3B8" stroke-width="2"
+                  stroke-dasharray="754" stroke-dashoffset="754" class="loop__ring"/>
+          <path id="loopPath" d="M160 40 a120 120 0 1 1 -0.1 0" fill="none"/>
+          <g class="loop__nodes" font-size="15" fill="#343833" text-anchor="middle">
+            <circle cx="160" cy="40" r="7" fill="#6BA3B8"/><text x="160" y="22">观察</text>
+            <circle cx="280" cy="160" r="7" fill="#6BA3B8"/><text x="296" y="165">建模</text>
+            <circle cx="160" cy="280" r="7" fill="#6BA3B8"/><text x="160" y="302">排程</text>
+            <circle cx="40" cy="160" r="7" fill="#6BA3B8"/><text x="24" y="165">复习</text>
+          </g>
+          <circle class="loop__dot" r="9" fill="#3C7E92">
+            <animateMotion dur="7s" repeatCount="indefinite" rotate="auto"><mpath href="#loopPath"/></animateMotion>
+          </circle>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ 设计纪律 ══ -->
+  <section class="section design" id="design">
+    <div class="wrap">
+      <header class="section__head reveal" data-r="up">
+        <p class="section__kicker">设计</p>
+        <h2 class="section__title">只守四条</h2>
+        <p class="section__sub">浑厚 · 质朴 · 疏朗 · 天青。其余细则一律放开。</p>
+      </header>
+
+      <div class="tenets reveal" data-r="up">
+        <div class="tenet"><span>浑厚</span><p>一屏一块深墨主体量，层叠影给厚度，重心落在下半。</p></div>
+        <div class="tenet"><span>质朴</span><p>哑光纸纹、真数据、可验证陈述。不辉光、不霓虹、不渐变字。</p></div>
+        <div class="tenet"><span>疏朗</span><p>首屏留白过半，版心 1120，主体偏席不居中，章节间 168。</p></div>
+        <div class="tenet"><span>天青</span><p>唯一强调色，面积克制。影像里的天青来自 H3，界面只点一点。</p></div>
+      </div>
+
+      <div class="palette reveal" data-r="up" data-d="70">
+        <div class="sw" style="--c:#EEEFEA"><i></i>粉墙 #EEEFEA</div>
+        <div class="sw" style="--c:#C9CBC1"><i></i>青砖浅 #C9CBC1</div>
+        <div class="sw" style="--c:#5F625A"><i></i>石灰 #5F625A</div>
+        <div class="sw" style="--c:#1B1D1A"><i></i>松烟 #1B1D1A</div>
+        <div class="sw sw--a" style="--c:#6BA3B8"><i></i>天青 #6BA3B8</div>
+      </div>
+
+      <div class="stack reveal" data-r="up" data-d="140">
+        <p class="stack__k">本页用到的技术（逐项可指认）</p>
+        <ul>
+          <li><b>H3 影像</b> 本机 MiniMax H3 生成，28 支取 15，静音循环，首帧占位，进入视口才播。</li>
+          <li><b>WebGL 墨潮</b> 片元着色器 fbm 噪声 + 域扭曲，实时生成低对比的「气」；无 WebGL 降级 canvas2D。</li>
+          <li><b>程序化等深线</b> v5 脚本产几何，运行时取路径逐层描边，非位图、非手绘。</li>
+          <li><b>滚动编排</b> 原生 scroll progress + rAF 驱动五幕揭幕，钉住舞台，无第三方库、无自动轮播。</li>
+          <li><b>SVG 滤镜</b> feGaussianBlur + feColorMatrix 做 gooey 墨晕，feTurbulence 做纸纹。</li>
+          <li><b>降级</b> prefers-reduced-motion 全停、无 JS 内容仍可读、断网可用、零外链。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CTA ══ -->
+  <section class="cta" id="download">
+    <div class="wrap cta__in reveal" data-r="scale">
+      <h2>把学海装进设备</h2>
+      <p>Mac · Windows · 安卓 · iOS · Web。进度与题库本地优先，跨端同步。</p>
+      <div class="cta__pills"><span>macOS</span><span>Windows</span><span>Android</span><span>iOS</span><span>Web</span></div>
+      <a class="btn btn--solid" href="download.html">前往下载页</a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <span class="foot__b">学海</span>
+    <span>影像：本机 MiniMax H3 · 几何：灯花 v5 程序化资产</span>
+    <span>浑厚 · 质朴 · 疏朗 · 天青</span>
+  </div>
+</footer>
+
+<script src="assets/js/contours-data.js"></script>
+<script src="assets/js/showcase.js"></script>
+</body>
+</html>

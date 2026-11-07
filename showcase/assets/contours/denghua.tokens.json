@@ -1,0 +1,199 @@
+{
+  "$description": "学海 · 灯花设计 令牌；color 为 [素纸, 墨海]",
+  "color": {
+    "bg": [
+      "#EEF1EC",
+      "#0C181B"
+    ],
+    "surface": [
+      "#E3E8E2",
+      "#122428"
+    ],
+    "line": [
+      "#C9D2CC",
+      "#25393E"
+    ],
+    "textMuted": [
+      "#566A6B",
+      "#8FA5A5"
+    ],
+    "text": [
+      "#22363A",
+      "#DDE6E2"
+    ],
+    "ink": [
+      "#10242A",
+      "#EEF1EC"
+    ],
+    "sea": [
+      "#2F6F78",
+      "#5FA3AC"
+    ],
+    "lamp": [
+      "#F0B13F",
+      "#F4BC4F"
+    ],
+    "lampText": [
+      "#8A5A0B",
+      "#F4BC4F"
+    ],
+    "danger": [
+      "#B23A2B",
+      "#E0705D"
+    ],
+    "massBg": [
+      "#10242A",
+      "#122428"
+    ],
+    "onMass": [
+      "#EEF1EC",
+      "#EEF1EC"
+    ],
+    "onMassMuted": [
+      "#8FA5A5",
+      "#8FA5A5"
+    ],
+    "onLamp": [
+      "#10242A",
+      "#0C181B"
+    ]
+  },
+  "space": [
+    4,
+    8,
+    12,
+    16,
+    20,
+    24,
+    32,
+    48,
+    64,
+    96
+  ],
+  "radius": {
+    "s": 8,
+    "m": 12,
+    "l": 16,
+    "xl": 24,
+    "mass": 28
+  },
+  "type": {
+    "display": {
+      "size": 44,
+      "line": 52,
+      "weight": 900,
+      "family": "serif",
+      "tracking": 0.02,
+      "relativeTo": "largeTitle"
+    },
+    "title": {
+      "size": 28,
+      "line": 36,
+      "weight": 700,
+      "family": "serif",
+      "tracking": 0.02,
+      "relativeTo": "title"
+    },
+    "heading": {
+      "size": 22,
+      "line": 30,
+      "weight": 600,
+      "family": "serif",
+      "tracking": 0.01,
+      "relativeTo": "title2"
+    },
+    "reading": {
+      "size": 17,
+      "line": 30,
+      "weight": 400,
+      "family": "serif",
+      "tracking": 0.02,
+      "relativeTo": "body"
+    },
+    "body": {
+      "size": 17,
+      "line": 24,
+      "weight": 400,
+      "family": "sans",
+      "tracking": 0,
+      "relativeTo": "body"
+    },
+    "callout": {
+      "size": 16,
+      "line": 22,
+      "weight": 400,
+      "family": "sans",
+      "tracking": 0,
+      "relativeTo": "callout"
+    },
+    "subhead": {
+      "size": 15,
+      "line": 22,
+      "weight": 400,
+      "family": "sans",
+      "tracking": 0,
+      "relativeTo": "subheadline"
+    },
+    "footnote": {
+      "size": 13,
+      "line": 18,
+      "weight": 400,
+      "family": "sans",
+      "tracking": 0.01,
+      "relativeTo": "footnote"
+    },
+    "caption": {
+      "size": 11,
+      "line": 14,
+      "weight": 500,
+      "family": "sans",
+      "tracking": 0.02,
+      "relativeTo": "caption2"
+    },
+    "inscribe": {
+      "size": 17,
+      "line": 28,
+      "weight": 400,
+      "family": "kai",
+      "tracking": 0.02,
+      "relativeTo": "body"
+    }
+  },
+  "motion": {
+    "instant": 100,
+    "quick": 180,
+    "base": 280,
+    "slow": 480,
+    "bloom": 900,
+    "breath": 5200,
+    "spring": {
+      "smooth": {
+        "response": 0.45,
+        "damping": 1.0
+      },
+      "snappy": {
+        "response": 0.3,
+        "damping": 0.86
+      },
+      "bloom": {
+        "response": 0.8,
+        "damping": 0.72
+      }
+    }
+  },
+  "opacity": {
+    "contourPaper": 0.34,
+    "contourMass": 0.42,
+    "contourHeader": 0.2,
+    "glow": 0.18
+  },
+  "size": {
+    "touch": 44,
+    "button": 52,
+    "buttonPrimary": 56,
+    "row": 56,
+    "lampButton": 128,
+    "margin": 20,
+    "reading": 640
+  }
+}
