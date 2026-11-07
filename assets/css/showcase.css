@@ -293,3 +293,16 @@ html:not(.js) .cap:first-child{opacity:1;transform:none}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important}
   #tide-gl{display:none}
 }
+
+/* ── 融合后共用：夜读切换 / 页脚法律入口 ── */
+.icon-toggle{width:36px;height:36px;display:grid;place-items:center;border:1px solid var(--line);
+  border-radius:50%;background:transparent;color:var(--ink);cursor:pointer;
+  transition:border-color var(--t) var(--ease),background var(--t) var(--ease),transform var(--t) var(--ease)}
+.icon-toggle:hover{border-color:var(--accent);background:var(--accent-wash);transform:rotate(-18deg)}
+.icon-toggle svg{width:17px;height:17px}
+body:not(.night) .icon-toggle .i-moon,body.night .icon-toggle .i-sun{display:none}
+.page-download .nav__in .icon-toggle{margin-left:auto}
+.foot__legal{font-size:12px;color:var(--sub)}
+.foot__legal a{color:var(--accent-deep)}
+.foot__in span.foot__legal{margin-left:auto}
+.foot__in span:not(.foot__legal):last-child{margin-left:0}

@@ -13,17 +13,21 @@
   /* ── 1. 双相：素纸 / 墨海 ── */
   function initPhase() {
     var btn = $("[data-night]");
+    // 与官网内页共用同一个主题键（site.js 的 hai-site-theme），跨页切换不丢失
     var saved = null;
-    try { saved = localStorage.getItem("xh-night"); } catch (e) {}
+    try { saved = localStorage.getItem("hai-site-theme") || localStorage.getItem("xh-night"); } catch (e) {}
     // 素纸是主体相；夜读只由用户主动切换，不跟随系统主题自动改换气质
-    if (saved === "1") document.body.classList.add("night");
+    if (saved === "night" || saved === "1") document.body.classList.add("night");
     function sync() {
       if (btn) btn.setAttribute("aria-pressed", document.body.classList.contains("night") ? "true" : "false");
     }
     sync();
     if (btn) btn.addEventListener("click", function () {
       var on = document.body.classList.toggle("night");
-      try { localStorage.setItem("xh-night", on ? "1" : "0"); } catch (e) {}
+      try {
+        localStorage.setItem("hai-site-theme", on ? "night" : "day");
+        localStorage.removeItem("xh-night");
+      } catch (e) {}
       sync();
     });
   }

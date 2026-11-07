@@ -59,6 +59,8 @@
   }
 
   function init() {
+    if (window.XHTide.started) return;   // 首页/下载页可能各引一次，幂等
+    window.XHTide.started = true;
     var cv = document.querySelector("#tide-gl");
     if (!cv || REDUCE) return;
     var gl = null;

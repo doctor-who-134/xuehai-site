@@ -1,5 +1,13 @@
 # 学海 · 影像与设计（showcase）
 
+> **2026-11-07 融合说明**：影像网已并入官网，本目录不再是独立站点。
+> - 官网首页 = 根 `index.html`（观海 v2）；下载页 = 根 `download.html`。
+> - 影像资源已归位到根 `assets/h3/`、`assets/css/`、`assets/js/`、`assets/contours/`。
+> - 本目录 `index.html` / `download.html` 仅为跳转到官网的过渡页；`index-legacy.html` 保留 v1 对照。
+> - 全站统一层见根 `assets/css/unify.css` 与 `assets/js/unify.js`；结构以根 `README.md` 为准。
+>
+> 以下为融合前的交付记录，保留作沿革；其中的旧路径已不再适用。
+
 独立展示页，自包含，不依赖主站样式表，也不改动主站任何既有页面。
 
 - 入口：`showcase/index.html`（**旗舰版 v2 · 观海**）· `showcase/download.html`（影像版下载页）

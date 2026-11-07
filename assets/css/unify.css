@@ -1,0 +1,101 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   学海官网 · 全站统一层
+   把影像页「观海」的气质注入官网内页：素纸 · 天青 · 墨海。
+   只覆盖令牌与少量外壳，不改内页既有布局与组件结构。
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* ── 1. 色板归一：暖赭陶 → 素纸天青（保留六科 wash 作内容语义） ── */
+:root{
+  --paper:#EEEFEA; --paper-2:#E7E9E2; --paper-3:#DDE0D7;
+  --surface:#F6F7F3; --surface-2:#F1F3EE;
+  --ink:#1B1D1A; --text:#343833; --mute:#5F625A; --faint:#6E726A;
+  --line:#C9CBC1; --line-strong:#ADB1A7;
+  --terra:#6BA3B8; --terra-deep:#3C7E92; --terra-soft:#E4EFF1;
+  --teal:#3C7E92; --earth:#7A6045;
+  --shadow-soft:0 4px 14px rgba(27,29,26,.06),0 1px 2px rgba(27,29,26,.03);
+  --shadow-lifted:0 14px 34px rgba(27,29,26,.10),0 2px 4px rgba(27,29,26,.04);
+  --shadow-floating:0 30px 70px rgba(27,29,26,.16),0 4px 10px rgba(27,29,26,.05);
+  --unify-ease:cubic-bezier(.16,1,.3,1);
+}
+
+/* ── 2. 墨海相：与主站 site.js 的 html[data-theme="night"] 对齐 ── */
+html[data-theme="night"]{
+  --paper:#151714; --paper-2:#1B1D1A; --paper-3:#232824;
+  --surface:#1E211D; --surface-2:#1A1D19;
+  --ink:#F1F3EF; --text:#D8DFDA; --mute:#98A6A0; --faint:#8A9992;
+  --line:#34403B; --line-strong:#4A5A54;
+  --terra:#8FC0BE; --terra-deep:#A9D3D0; --terra-soft:#1B2A2C;
+  --teal:#8FC0BE;
+  --shadow-soft:0 4px 14px rgba(0,0,0,.3),0 1px 2px rgba(0,0,0,.2);
+  --shadow-lifted:0 14px 34px rgba(0,0,0,.38),0 2px 4px rgba(0,0,0,.2);
+  --shadow-floating:0 30px 70px rgba(0,0,0,.5),0 4px 10px rgba(0,0,0,.3);
+}
+
+/* ── 3. 生成式墨潮画布 / 进度线 / 墨滴（由 unify.js 创建） ── */
+#tide-gl{position:fixed;inset:0;width:100%;height:100%;z-index:0;
+  pointer-events:none;opacity:.13;mix-blend-mode:multiply}
+html[data-theme="night"] #tide-gl{opacity:.2;mix-blend-mode:screen}
+.progress{position:fixed;top:0;left:0;right:0;height:2px;z-index:120;pointer-events:none}
+.progress i{display:block;height:100%;width:0;background:var(--terra);
+  box-shadow:0 0 10px rgba(107,163,184,.5);transition:width .1s linear}
+.ink-splash{position:fixed;left:0;top:0;width:14px;height:14px;border-radius:50%;
+  background:var(--terra);z-index:130;pointer-events:none;
+  transform:translate(-50%,-50%) scale(0);opacity:.38;filter:url(#unify-gooey)}
+.ink-splash.go{animation:unifySplash .6s var(--unify-ease) forwards}
+@keyframes unifySplash{to{transform:translate(-50%,-50%) scale(8);opacity:0}}
+.unify-defs{position:absolute;width:0;height:0;overflow:hidden}
+
+/* ── 4. 外壳更轻：与观海首页的导航同一套呼吸 ── */
+.site-head{backdrop-filter:saturate(150%) blur(12px);-webkit-backdrop-filter:saturate(150%) blur(12px)}
+.head-nav a{transition:color .3s var(--unify-ease)}
+.head-nav a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:1px;
+  background:var(--terra);transform:scaleX(0);transform-origin:center;
+  transition:transform .45s var(--unify-ease)}
+.head-nav a:hover::after,.head-nav a[aria-current="page"]::after{transform:scaleX(1)}
+.brand-name{font-family:"Songti SC","STSong","Noto Serif SC",serif}
+.btn-dl{background:var(--terra);border-color:var(--terra)}
+.now-chip{border-color:var(--line)}
+.world-glow{opacity:.5}
+
+/* ── 5. 页脚法律入口（首页 / 下载页共用 showcase.css，这里给内页兜底） ── */
+.foot__legal{font-size:12px;color:var(--mute)}
+.foot__legal a{color:var(--terra-deep)}
+
+/* ── 6. 硬编码暖色收口：四时保留，颜色换到素纸·天青 ── */
+:root{
+  --world:linear-gradient(168deg,#F5F7F3 0%,#EEEFEA 52%,#E1E6E0 100%);
+  --world-glow:radial-gradient(60vw 42vw at 14% 4%,rgba(107,163,184,.12),transparent 62%);
+}
+html[data-time="dawn"]{
+  --world:linear-gradient(168deg,#F2F6F4,#E9EFEC 46%,#DCE7E5);
+  --world-glow:radial-gradient(60vw 44vw at 16% 0%,rgba(107,163,184,.16),transparent 60%);
+}
+html[data-time="day"]{
+  --world:linear-gradient(168deg,#F6F7F3,#EEEFEA 54%,#E1E6E0);
+  --world-glow:radial-gradient(58vw 40vw at 60% 4%,rgba(107,163,184,.10),transparent 62%);
+}
+html[data-time="dusk"]{
+  --world:linear-gradient(168deg,#F0F4F2,#E6ECEA 46%,#D6E2E1);
+  --world-glow:radial-gradient(60vw 44vw at 84% 86%,rgba(60,126,146,.14),transparent 60%);
+}
+html[data-time="night"]{
+  --world:linear-gradient(168deg,#151714,#1B1D1A 52%,#101310);
+  --world-glow:radial-gradient(56vw 44vw at 78% 2%,rgba(107,163,184,.14),transparent 64%);
+}
+html[data-theme="night"]{
+  --world:linear-gradient(168deg,#151714,#1B1D1A 52%,#101310);
+  --world-glow:radial-gradient(58vw 44vw at 78% 2%,rgba(107,163,184,.16),transparent 64%);
+}
+.cta-band{background:linear-gradient(112deg,#1B1D1A,#223038)!important;color:#EEEFEA}
+.cta-band .h1,.cta-band .h2,.cta-band .h3{color:#fff}
+.cta-band .label{color:#A9D3D0}
+html[data-theme="night"] .cta-band{background:linear-gradient(112deg,#101310,#1B2A2C)!important;color:#EEEFEA}
+html[data-theme="night"] .cta-band .label{color:#A9D3D0}
+.scene--plain,.plate,.art-band:not([class*="wash-"]){background:var(--paper)}
+html[data-theme="night"] .btn--terra{background:var(--terra);color:#101310}
+
+/* ── 7. 降级 ── */
+@media(prefers-reduced-motion:reduce){
+  #tide-gl,.ink-splash{display:none}
+  *,*::before,*::after{animation-duration:.01ms!important}
+}

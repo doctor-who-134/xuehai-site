@@ -86,3 +86,7 @@
 .faq__grid article{border-top:2px solid var(--accent);padding-top:var(--s3)}
 .faq__grid h3{font:600 20px var(--serif);color:var(--void);margin-bottom:var(--s2)}
 .faq__grid p{font-size:14px;color:var(--sub)}
+
+/* 下载页沿用影像层：墨潮压在内容之上做极淡叠加（不受全站统一层通用值影响） */
+.page-download #tide-gl{z-index:40;opacity:.18;mix-blend-mode:multiply}
+.page-download.night #tide-gl,html[data-theme="night"] .page-download #tide-gl{opacity:.2;mix-blend-mode:screen}
